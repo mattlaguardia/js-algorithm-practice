@@ -1,5 +1,7 @@
 # js-algorithm-practice
 
+This repo has JS answers to some algorithm questions. Try to build out algorithms before using a node and a text editor.
+
 ## Check Prime
 Question: How would you verify a prime number?
 
