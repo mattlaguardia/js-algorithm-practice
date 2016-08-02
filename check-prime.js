@@ -3,6 +3,7 @@ function isPrime(num){
   var divisor = 2;
 
   while(num > divisor){
+    // checking with modulous b/c if there is no remainder that means the inputted number is divisible by another number thus meaning that the inputted number is not a prime number //
     if(num % divisor == 0){
       return false;
     } else {
