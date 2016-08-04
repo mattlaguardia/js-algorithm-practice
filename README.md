@@ -22,3 +22,12 @@ Question: How do you get nth Fibonacci number?
 TODO: Create a function which returns the nth number in Fibonacci sequences with an input n. Fibonacci series is defined as f(n) = f(n-1) + f(n-2)
 
 Clue: Create an array and iterate through
+
+Extra: Write out both the O(n) and recursive answers
+
+## Question 4: Greatest Common divisor
+Question: How would you find the greatest common divisor of two numbers?
+
+TODO: Create a function which finds the greatest common divisor of two numbers.
+
+Clue: Use a while loop to loop through the divisors of the numbers until the two divisors matchup and must be the greatest number.
