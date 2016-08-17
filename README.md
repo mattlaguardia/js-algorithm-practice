@@ -31,3 +31,15 @@ Question: How would you find the greatest common divisor of two numbers?
 TODO: Create a function which finds the greatest common divisor of two numbers.
 
 Clue: Use a while loop to loop through the divisors of the numbers until the two divisors matchup and must be the greatest number.
+
+## Question 5: Removing Duplicate Numbers in an array
+Question: How would you remove duplicate members from an array?
+
+TODO:
+
+## Question 6: Mumbling
+Question: Try and get output of a string to be as follows:
+  input = "abcd"
+  output = "A-Bb-Ccc-Dddd"
+
+TODO: Build the function (hint iterate within an iteration)
