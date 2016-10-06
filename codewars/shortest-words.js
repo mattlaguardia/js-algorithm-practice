@@ -16,3 +16,11 @@ function findShort(s) {
 
 
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"), 3)
+
+
+// Other option from codewars //
+function findShort2(s){
+  return s.split(' ').map(w => w.length).sort()[0]
+}
+
+console.log(findShort2("bitcoin take over the world maybe who knows perhaps"), 3)
