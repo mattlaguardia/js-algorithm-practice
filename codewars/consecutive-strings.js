@@ -1,18 +1,20 @@
 function longestConsec(strArr, k) {
-  if( k <= 0 || strArr.length <=   k ){ return ''}
-  var result = []
-  var final = []
+  if( k <= 0 ){ return ''}
 
-  for(i = 0; i < strArr.length-1; i++){
-    if(strArr[i].length >= strArr[i+1].length){ result.push(strArr[i]) }
-    if(strArr[i+1].length > strArr[i]){ result.push(strArr[i])}
-  }
-  for(i = 0; i < k; i ++){
-    final.push(result[i])
-  }
+  var final = strArr.map((a, i) => strArr.slice(i, i+k).join(''))
   console.log(final)
-  return final.join('')
+  var result = ''
+  var counter = 0
+
+  for(i = 0; i < final.length-1; i++){
+    if(final[i].length > final[i+1].length && final[i].length > result.length){ result = final[i] }
+    if(final[i + 1].length > result.length) { result = final[i + 1] }
+    if(final[i].length == final[i+1].length){ result = final[i] }
+  }
+
+  return result
 }
 
 console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3), "ixoyx3452zzzzzzzzzzzz")
 console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2), "abigailtheta")
+console.log(longestConsec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1), "oocccffuucccjjjkkkjyyyeehh")
