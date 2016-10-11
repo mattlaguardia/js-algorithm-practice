@@ -1,6 +1,6 @@
 function highAndLow(numbers){
   numbers = numbers.split(' ')
-  var result = []
+
   var highest = parseInt(numbers[0])
   var lowest = parseInt(numbers[0])
 
@@ -12,7 +12,6 @@ function highAndLow(numbers){
     if( num < num2 && num < lowest ){ lowest = num }
     if( num2 < lowest ){ lowest = num2 }
   }
-
 
   return highest + ' ' + lowest
 }
