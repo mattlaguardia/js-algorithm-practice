@@ -32,4 +32,4 @@ function findMissing(list) {
 }
 
 
-console.log(findMissing([-5,-1,1,3,5,7,9,11]), "Answer: " + 7)
+console.log(findMissing([-5,-1,1,3,5,7,9,11]), "Answer: " + - 3)
