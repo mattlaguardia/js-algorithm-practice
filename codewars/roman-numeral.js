@@ -13,7 +13,6 @@ function romanNumeral(roman) {
         }
       }
     }
-    console.log(num)
     num = num + 4
   }
   else {
