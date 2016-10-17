@@ -35,7 +35,7 @@ Clue: Use a while loop to loop through the divisors of the numbers until the two
 ## Question 5: Removing Duplicate Numbers in an array
 Question: How would you remove duplicate members from an array?
 
-TODO:
+TODO: Build a function that checks numbers in an array
 
 ## Question 6: Mumbling
 Question: Try and get output of a string to be as follows:
