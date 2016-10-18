@@ -21,9 +21,9 @@ greetCurried = (greeting) => {
   }
 }
 
-const greetHello = greetCurried("Hello")
-greetHello("Jen")
-greetHello("Eddie")
+const greetHelloFirst = greetCurried("Hello")
+greetHelloFirst("Jen")
+greetHelloFirst("Eddie")
 
 // This adjustment to the way we wrote the function lets up create a function for any type of greeting, and pass that new function the name of the person that we want to greet ^^^
 
@@ -47,3 +47,27 @@ greetDeeplyCurried = (greeting) => {
 const greetAwkwardly = greetDeeplyCurried("Hello")("...")("?")
 greetAwkwardly("Heidi")
 greetAwkwardly("Wolf")
+
+// Currying Traditional Functions //
+// The only problem with the above curried function is syntax. As you build these curried functions up, you need to keep nesting returned functions, and call them with the new functions that require multiple sets of parentheses, each containing its own isolated argument -- this can get really really messy...
+
+// To address this problem, on approach is to create a quick and dirty currying function that will take the name of an existing function that was written without all the nested returns. A currying function would need to pull out the list of arguments for that function, and use those to return a curried version of the original function.
+
+var curryIt = function(uncurried) {
+  var parameters = Array.prototype.slice.call(arguments, 1);
+  return function() {
+    return uncurried.apply(this, parameters.concat(
+      Array.prototype.slice.call(arguments, 0)
+    ));
+  };
+};
+
+greeter = (greeting, separator, emphasis, name) => {
+  console.log(greeting + separator + name + emphasis);
+};
+
+var greetHello = curryIt(greeter, "Hello", ", ", ".");
+greetHello("Heidi");
+
+var greetGoodbye = curryIt(greeter, "Goodbye", ", ");
+greetGoodbye(".", "Joe");
