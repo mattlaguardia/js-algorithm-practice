@@ -1,4 +1,4 @@
-const boilingScore = (rolls) => {
+const bowlingScore = (rolls) => {
   var results = 0
 
   for(i = 0; i < rolls.length - 1; i = i + 2){
