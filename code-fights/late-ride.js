@@ -11,14 +11,9 @@ lateRide = (n) => {
     mins = mins.toString().split('')
     mins = parseInt(mins[0]) + parseInt(mins[1])
   }
-
-  var result = hours + mins
-
-  return result
+  return hours + mins
 }
 
 console.log(lateRide(240), 4)
 console.log(lateRide(808), 14)
 console.log(lateRide(1439), 19)
-
-// constraint that < 1450
