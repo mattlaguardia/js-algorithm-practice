@@ -1,9 +1,10 @@
-function Node(data) {
+// First need to make our node //
+const Node = (data) => {
   this.data = data
   this.next = null
 }
 
-function SinglyList() {
+const SinglyList = () => {
   this._length = 0
   this.head = null
 }
