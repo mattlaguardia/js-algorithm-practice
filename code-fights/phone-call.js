@@ -4,20 +4,19 @@ phoneCall = (min1, min2_10, min11, s) => {
   var counter = 0
 
   while(s > 0){
-    if( counter === 0 ){
+    if( counter === 1 ){
       s = s - min1
       counter++
     }
-    if( counter>=2 ){
-      s = s - min2_10
-      counter++
-    }
-    if( counter>10 ){
+    if( counter > 10 ){
       s = s - min11
       counter++
     }
+    if( counter <= 10 ){
+      s = s - min2_10
+      counter++
+    }
   }
-
   return counter
 }
 
