@@ -25,7 +25,7 @@ SinglyList.prototype.add = (value) => {
   while(currentNode.next){
     currentNode = currentNode.next
   }
-  
+
   currentNode.next = node
   this._length++
 
