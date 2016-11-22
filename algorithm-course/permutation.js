@@ -1,4 +1,4 @@
-// Question: Given two strings, is one a permutation of the other? //
+// Question: Given two strings, is one a permutation of the other? 
 
 const permutation = (one, two) => {
   if(typeof one !== 'string' || typeof two !== 'string'){
