@@ -47,3 +47,18 @@ remainderPairs([1,2,3,4,5])
 
 // Total computations: n * n * 1
 // Reduce: Quadratic time complexity = n^2 = O(n^2)
+
+///////////////////////////////////////
+// EXAMPLE 4
+///////////////////////////////////////
+function battles(ninjas, monsters) {
+  for (var i = 0; i < ninjas.length; i++) {
+    for (var j = 0; j < monsters.length; j++) {
+      console.log(ninjas[i] + " vs. " + monsters[j])
+    }
+  }
+}
+battles([1,2,3,4], [5,6,7])
+
+// Total computations: n * m * 1
+// Reduce: Linear time complexity = O(nm)
